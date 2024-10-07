@@ -1,0 +1,92 @@
+/* Basic footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer_details, .footer_subscribe {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+/* Styling footer details */
+.footer_details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer_details p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Styling email subscription form */
+.footer_subscribe h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer_subscribe input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 70%;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.footer_subscribe button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer_subscribe button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer bottom */
+.footer_bottom {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.footer_bottom p {
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer_container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer_details, .footer_subscribe {
+        width: 100%;
+    }
+
+    .footer_subscribe input[type="email"] {
+        width: 80%;
+    }
+}

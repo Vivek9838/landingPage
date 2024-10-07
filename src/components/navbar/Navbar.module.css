@@ -1,0 +1,38 @@
+.navbar{
+    position: sticky;
+    padding: 35px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.logo img{
+     width: 120px;
+    height: 100px;
+}
+.navbar_tag ul{
+    display: flex;
+    justify-content:center;
+    gap: 30px;
+    align-items: center;
+}
+.navbar_tag li{
+    font-weight:600;
+    color: rgb(114, 99, 99);
+    list-style-type: none;
+    cursor: pointer;
+}
+.navbar_tag a{
+    text-decoration: none;
+}
+/* .navbar_tag a:hover{
+    color:orange;
+} */
+.horizontal{
+    border: none;
+    height: 0.1px;     
+    background-color: #adacab; /* Tomato color */
+}
+
+.active_link{
+    color:orange;
+}
