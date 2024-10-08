@@ -42,6 +42,7 @@ const Main = () => {
           <button>LoadShare Rider App</button>
         </div>
       </div>
+      
       <div className={style.logistic_step}>
         <h1>Your 1-stop logistics solution</h1>
         <div className={style.cards}>

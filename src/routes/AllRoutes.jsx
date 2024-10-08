@@ -1,11 +1,11 @@
 import React from 'react'
 import { Route,Routes } from 'react-router-dom'
 import Main from '../components/main/Main'
-import About from "../page/About";
-import Contact from "../page/Contact"
-import Services from '../page/Services'
-import Rider from '../page/Rider'
-import Carrers from "../page/Carrers"
+import About from "../pages/About";
+import Contact from "../pages/Contact"
+import Services from '../pages/Services'
+import Rider from '../pages/Rider'
+import Carrers from "../pages/Carrers"
 
 
 function AllRoutes() {

@@ -1,38 +1,95 @@
-.navbar{
+.navbar {
     position: sticky;
     padding: 35px 100px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
-.logo img{
-     width: 120px;
+
+.logo img {
+    width: 120px;
     height: 100px;
 }
-.navbar_tag ul{
+.humBurgerMenu{
+    display: none;
+}
+.navbar_tag ul {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     gap: 30px;
     align-items: center;
 }
-.navbar_tag li{
-    font-weight:600;
+
+.navbar_tag li {
+    font-weight: 600;
     color: rgb(114, 99, 99);
     list-style-type: none;
     cursor: pointer;
 }
-.navbar_tag a{
+
+.navbar_tag a {
     text-decoration: none;
 }
+
 /* .navbar_tag a:hover{
     color:orange;
 } */
-.horizontal{
+.horizontal {
     border: none;
-    height: 0.1px;     
-    background-color: #adacab; /* Tomato color */
+    height: 0.1px;
+    background-color: #adacab;
+    /* Tomato color */
 }
 
-.active_link{
-    color:orange;
+.active_link {
+    color: orange;
+}
+
+@media only screen and (max-width:460px) {
+    .navbar {
+        padding: 20px 70px;
+    }
+.humBurgerMenu{
+    display: block;
+}
+    .navbar_tag {
+        display: none;
+    }
+
+    .horizontal {
+        position: relative;
+    }
+
+    .humBurgerMenu i {
+        color: orange;
+        font-size: large;
+    }
+
+    .humbergerShowMenu {
+        min-width: 310px;
+        margin-top: 3px;
+        padding: 15px 20px;
+        background-color: rgb(243, 242, 242);
+        box-shadow: 0 0 2px rgba(226, 226, 226, 0.3);
+        z-index: 100;
+        position: absolute;
+        right: 9%;
+        top: 100%;
+    }
+
+    .humbergerShowMenu ul {
+        display: grid;
+        row-gap: 20px;
+    }
+
+    .humbergerShowMenu li {
+        list-style-type: none;
+        font-weight: 600;
+        color: rgb(114, 99, 99);
+        cursor: pointer;
+    }
+
+    .humbergerShowMenu a {
+        text-decoration: none;
+    }
 }

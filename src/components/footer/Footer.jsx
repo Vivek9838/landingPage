@@ -11,19 +11,6 @@ const Footer = () => {
                     <p>123 Business Road, City, Country</p>
                     <p>Email: info@company.com | Phone: +123456789</p>
                 </div>
-
-                {/* Subscribe to Newsletter */}
-                <div className={style.footer_subscribe}>
-                    <h3>Subscribe to our Newsletter</h3>
-                    <form>
-                        <input 
-                            type="email" 
-                            placeholder="Enter your email" 
-                            required 
-                        />
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
             </div>
 
             {/* Footer Bottom Section */}
