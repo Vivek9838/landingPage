@@ -1,33 +1,45 @@
-import React, { useState } from 'react';
-import './pages.css'; 
+import React, { useState } from "react";
+import "./pages.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    mobile: '',
-    email: '',
-    city: '',
-    message: ''
+    name: "",
+    mobile: "",
+    email: "",
+    city: "",
+    message: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data Submitted: ', formData);
+    console.log("Form Data Submitted: ", formData);
   };
 
   return (
     <div className="form-container">
-      
+      <div className="keepTouch">
+        <div className="touch">
+          <h2>keep in Touch</h2>
+          <h4>Email Address</h4>
+          <span>abc123@gmail.com</span>
+        </div>
+        <div className="bussiness">
+          <h2>Bussiness Address</h2>
+          <p>Logo Networks Pvt. Ltd. </p>
+          <p> Attic Space, 3rd Floor, Lotus,</p>
+          <p>80 Feet Road, Koramangala </p>
+          <p>4th Block, acdedssfsf - 560034</p>
+        </div>
+      </div>
       <form onSubmit={handleSubmit}>
-      <h4>You can reach easly from here</h4>
         <div className="form-group">
           <label>Name</label>
           <input
@@ -82,7 +94,9 @@ const Contact = () => {
           />
         </div>
 
-        <button type="submit" className="submit-button">Submit</button>
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
       </form>
     </div>
   );
