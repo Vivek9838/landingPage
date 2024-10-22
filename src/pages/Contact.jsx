@@ -10,6 +10,10 @@ const Contact = () => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false);
+     
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -18,9 +22,41 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted: ", formData);
+    setLoading(true);
+    setError(null);
+    setSuccess(false);
+
+    try {
+      const response = await fetch("http://localhost:5000/api/v1/users/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit the form");
+      }
+
+      const data = await response.json();
+      console.log("Form Data Submitted Successfully:", data);
+      setSuccess(true);
+      setFormData({
+        name: "",
+        mobile: "",
+        email: "",
+        city: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setError("Failed to submit the form. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
